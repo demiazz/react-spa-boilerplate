@@ -1,0 +1,61 @@
+#!/usr/bin/env node
+
+/* eslint no-console: 0 */
+
+const path = require('path');
+const express = require('express');
+const webpack = require('webpack');
+const devMiddleware = require('webpack-dev-middleware');
+const hotMiddleware = require('webpack-hot-middleware');
+
+
+const isProduction = process.env.NODE_ENV === 'production';
+const config = isProduction ? require('../webpack.production.config.js')
+                                  : require('../webpack.development.config.js');
+const port = isProduction ? (process.env.PORT || 3000) : 3000;
+const app = express();
+
+if (isProduction) {
+  const staticPath = path.join(__dirname, '..', 'dist');
+
+  app.use(express.static(staticPath));
+  app.get('*', (req, res) => {
+    const filePath = path.join(__dirname, '..', 'dist', 'index.html');
+
+    res.sendFile(filePath);
+  });
+} else {
+  const compiler = webpack(config);
+  const middleware = devMiddleware(compiler, {
+    publicPath: config.output.publicPath,
+    contentBase: 'src',
+    stats: {
+      colors: true,
+      hash: false,
+      timings: true,
+      chunks: false,
+      chunkModules: false,
+      modules: false,
+    },
+  });
+
+  app.use(middleware);
+  app.use(hotMiddleware(compiler));
+  app.get('*', (req, res) => {
+    const filePath = path.join(__dirname, '..', 'dist', 'index.html');
+    const file = middleware.fileSystem.readFileSync(filePath);
+
+    res.write(file);
+    res.end();
+  });
+}
+
+app.listen(port, '127.0.0.1', err => {
+  if (err) {
+    console.log(err);
+  }
+
+  console.log(
+    'Listening on port 3000. Open up http://localhost:%s/ in your browser'
+  , port);
+});
