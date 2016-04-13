@@ -4,12 +4,11 @@ A boilerplate for React SPA without server rendering
 
 ## Install and Running
 
-`git clone https://github.com/demiazz/react-spa-boilerplate.git`
-
-1. cd react-spa-boilerplate
-2. npm install
-3. npm start
-4. navigate to http://localhost:3000 in your browser of choice.
+1. `git clone https://github.com/demiazz/react-spa-boilerplate.git`
+2. `cd react-spa-boilerplate`
+3. `npm install`
+4. `npm start`
+5. navigate to `http://localhost:3000` in your browser of choice.
 
 ## Stack
 
