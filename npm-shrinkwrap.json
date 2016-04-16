@@ -3127,6 +3127,11 @@
       "from": "minimist@>=1.1.0 <2.0.0",
       "resolved": "https://registry.npmjs.org/minimist/-/minimist-1.2.0.tgz"
     },
+    "mkdir-recursive": {
+      "version": "0.2.1",
+      "from": "mkdir-recursive@0.2.1",
+      "resolved": "https://registry.npmjs.org/mkdir-recursive/-/mkdir-recursive-0.2.1.tgz"
+    },
     "mkdirp": {
       "version": "0.5.1",
       "from": "mkdirp@>=0.5.1 <0.6.0",

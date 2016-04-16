@@ -106,6 +106,7 @@
     "lodash.values":                   "4.1.0",
     "ejs":                             "2.4.1",
     "commander":                       "2.9.0",
-    "uppercamelcase":                  "1.1.0"
+    "uppercamelcase":                  "1.1.0",
+    "mkdir-recursive":                 "0.2.1"
   }
 }
