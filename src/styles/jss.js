@@ -5,6 +5,8 @@ import camelCase from 'jss-camel-case';
 import isolate from 'jss-isolate';
 import react from 'react-jss';
 
+import reset from './reset';
+
 
 const jss = create();
 
@@ -13,7 +15,7 @@ const jss = create();
 jss.use(prefixer());
 jss.use(nested());
 jss.use(camelCase());
-jss.use(isolate());
+jss.use(isolate({ reset }));
 
 // Wrap JSS with React plugin
 
