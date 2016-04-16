@@ -1,0 +1,24 @@
+import React from 'react';
+
+import { jss } from '../styles';
+
+
+export default class <%= name %> extends React.Component {
+  render() {
+    const classes = styleSheet.classes; // eslint-disable-line
+
+    return null;
+  }
+}
+
+
+const styleSheet = jss.createStyleSheet({
+  // Write here styles for your component
+}).attach();
+
+
+if (__DEV__) {
+  if (module.hot) {
+    module.hot.dispose(::styleSheet.detach);
+  }
+}

@@ -103,6 +103,9 @@
     "istanbul":                        "1.0.0-alpha.2",
 
     "rimraf":                          "2.5.2",
-    "lodash.values":                   "4.1.0"
+    "lodash.values":                   "4.1.0",
+    "ejs":                             "2.4.1",
+    "commander":                       "2.9.0",
+    "uppercamelcase":                  "1.1.0"
   }
 }
