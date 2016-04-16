@@ -2858,6 +2858,11 @@
       "from": "jss-camel-case@1.0.2",
       "resolved": "https://registry.npmjs.org/jss-camel-case/-/jss-camel-case-1.0.2.tgz"
     },
+    "jss-default-unit": {
+      "version": "2.1.1",
+      "from": "jss-default-unit@2.1.1",
+      "resolved": "https://registry.npmjs.org/jss-default-unit/-/jss-default-unit-2.1.1.tgz"
+    },
     "jss-isolate": {
       "version": "0.1.0",
       "from": "jss-isolate@0.1.0",

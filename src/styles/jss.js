@@ -2,6 +2,7 @@ import { create } from 'jss';
 import prefixer from 'jss-vendor-prefixer';
 import nested from 'jss-nested';
 import camelCase from 'jss-camel-case';
+import defaultUnit from 'jss-default-unit';
 import isolate from 'jss-isolate';
 import react from 'react-jss';
 
@@ -15,6 +16,7 @@ const jss = create();
 jss.use(prefixer());
 jss.use(nested());
 jss.use(camelCase());
+jss.use(defaultUnit({ unit: 'px' }));
 jss.use(isolate({ reset }));
 
 // Wrap JSS with React plugin
