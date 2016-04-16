@@ -2858,6 +2858,11 @@
       "from": "jss-camel-case@1.0.2",
       "resolved": "https://registry.npmjs.org/jss-camel-case/-/jss-camel-case-1.0.2.tgz"
     },
+    "jss-isolate": {
+      "version": "0.1.0",
+      "from": "jss-isolate@0.1.0",
+      "resolved": "https://registry.npmjs.org/jss-isolate/-/jss-isolate-0.1.0.tgz"
+    },
     "jss-nested": {
       "version": "1.0.3",
       "from": "jss-nested@1.0.3",
