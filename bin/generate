@@ -10,8 +10,10 @@ const commander = require('commander');
 
 // Templates
 
+const rootPath = path.join(__dirname, '..');
 const templatesPath = path.join(__dirname, '..', 'scaffold');
 const sourcePath = path.join(__dirname, '..', 'src');
+const testPath = path.join(__dirname, '..', 'test');
 
 
 function checkFileExisting(name, filePath) {
@@ -21,7 +23,9 @@ function checkFileExisting(name, filePath) {
         return resolve();
       }
 
-      return reject(`Error: component '${name}' already exists`);
+      const relativePath = path.relative(rootPath, filePath);
+
+      return reject(`Error: file '${relativePath}' already exists`);
     });
   });
 }
@@ -62,7 +66,7 @@ function generateFile(name, data, outputPath) {
     .then(() => readTemplate(name))
     .then(template => renderTemplate(template, data))
     .then(content => saveTemplate(content, outputPath))
-    .catch(err => console.log(err.stack)); // eslint-disable-line
+    .catch(err => console.log(err)); // eslint-disable-line
 }
 
 function extractName(scaffoldName) {
@@ -84,9 +88,11 @@ commander
   .description('generate class component')
   .action(component => {
     const outputPath = path.join(sourcePath, 'components', `${component}.js`);
+    const testOutputPath = path.join(testPath, 'components', `${component}.js`);
     const name = extractName(component);
 
-    return generateFile('component', { name }, outputPath);
+    generateFile('component', { name }, outputPath);
+    generateFile('component-test', { name }, testOutputPath);
   });
 
 commander
@@ -95,9 +101,11 @@ commander
   .description('generate pure component')
   .action(component => {
     const outputPath = path.join(sourcePath, 'components', `${component}.js`);
+    const testOutputPath = path.join(testPath, 'components', `${component}.js`);
     const name = extractName(component);
 
-    return generateFile('pure-component', { name }, outputPath);
+    generateFile('pure-component', { name }, outputPath);
+    generateFile('component-test', { name, path: component }, testOutputPath);
   });
 
 commander.parse(process.argv);
