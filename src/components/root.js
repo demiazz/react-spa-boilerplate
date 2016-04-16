@@ -14,7 +14,7 @@ const styles = {
   },
   content: {
     color: theme.textColor,
-    fontSize: `${theme.textSize}px`,
+    fontSize: theme.textSize,
   },
 };
 
