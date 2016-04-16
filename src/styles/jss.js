@@ -4,7 +4,6 @@ import nested from 'jss-nested';
 import camelCase from 'jss-camel-case';
 import defaultUnit from 'jss-default-unit';
 import isolate from 'jss-isolate';
-import react from 'react-jss';
 
 import reset from './reset';
 
@@ -19,10 +18,5 @@ jss.use(camelCase());
 jss.use(defaultUnit({ unit: 'px' }));
 jss.use(isolate({ reset }));
 
-// Wrap JSS with React plugin
 
-const useSheet = react(jss);
-
-
-export { jss };
-export { useSheet };
+export { jss as default };

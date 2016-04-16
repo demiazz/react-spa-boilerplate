@@ -1,5 +1,5 @@
 import './global';
 
 
-export { jss, useSheet } from './jss';
+export jss from './jss';
 export theme from './theme';

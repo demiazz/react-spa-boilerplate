@@ -1,9 +1,9 @@
 import React from 'react';
 
-import { useSheet, theme } from '../styles';
+import { jss, theme } from '../styles';
 
 
-const styles = {
+const styles = jss.createStyleSheet({
   container: {
     position: 'fixed',
     display: 'flex',
@@ -16,11 +16,17 @@ const styles = {
     color: theme.textColor,
     fontSize: theme.textSize,
   },
-};
+}).attach();
 
-class Root extends React.Component {
+if (__DEV__) {
+  if (module.hot) {
+    module.hot.dispose(::styles.detach);
+  }
+}
+
+export default class Root extends React.Component {
   render() {
-    const { classes } = this.props.sheet;
+    const { classes } = styles;
 
     return (
       <div className={classes.container}>
@@ -31,6 +37,3 @@ class Root extends React.Component {
     );
   }
 }
-
-
-export default useSheet(Root, styles);
