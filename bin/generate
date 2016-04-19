@@ -92,7 +92,7 @@ commander
     const name = extractName(component);
 
     generateFile('component', { name }, outputPath);
-    generateFile('component-test', { name }, testOutputPath);
+    generateFile('component-test', { name, path: component }, testOutputPath);
   });
 
 commander
