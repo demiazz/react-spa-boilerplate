@@ -13,6 +13,7 @@ module.exports = {
     publicPath: '/',
   },
   plugins: [
+    new webpack.EnvironmentPlugin(['NODE_ENV']),
     new webpack.optimize.OccurenceOrderPlugin(),
     new HtmlPlugin({
       template: 'src/index.tpl.html',

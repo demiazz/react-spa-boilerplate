@@ -27,12 +27,6 @@ config.plugins.push(
     modules: false,
   })
 );
-config.plugins.push(
-  new webpack.DefinePlugin({
-    __DEV__: process.env.NODE_ENV !== 'production',
-    'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV),
-  })
-);
 
 // Configure loaders
 

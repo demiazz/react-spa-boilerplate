@@ -24,12 +24,6 @@ config.plugins.push(
 config.plugins.push(
   new webpack.NoErrorsPlugin()
 );
-config.plugins.push(
-  new webpack.DefinePlugin({
-    __DEV__: true,
-    'process.env.NODE_ENV': JSON.stringify('development'),
-  })
-);
 
 // Configure loaders
 
