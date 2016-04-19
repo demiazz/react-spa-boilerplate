@@ -26,11 +26,11 @@
     "node": ">= 5.10.0"
   },
   "scripts": {
-    "start":         "bin/server",
-    "build":         "bin/build",
-    "test":          "$(npm bin)/mocha --compilers js:babel-register --recursive",
-    "test:watch":    "$(npm bin)/mocha --watch --compilers js:babel-register --recursive",
-    "test:coverage": "$(npm bin)/istanbul cover --report html $(npm root)/mocha/bin/_mocha -- --compilers js:babel-register --recursive",
+    "start":         "NODE_ENV=development bin/server",
+    "build":         "NODE_ENV=production bin/build",
+    "test":          "NODE_ENV=test $(npm bin)/mocha --compilers js:babel-register --recursive",
+    "test:watch":    "NODE_ENV=test $(npm bin)/mocha --watch --compilers js:babel-register --recursive",
+    "test:coverage": "NODE_ENV=test $(npm bin)/istanbul cover --report html $(npm root)/mocha/bin/_mocha -- --compilers js:babel-register --recursive",
     "lint":          "$(npm bin)/eslint ."
   },
   "dependencies": {
