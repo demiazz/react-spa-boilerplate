@@ -2,11 +2,11 @@ import jss from './jss';
 
 
 const styles = jss.createStyleSheet({
-  /* Use this stylesheet for global styles */
+  // Write here your global styles
 }, { named: false, isolate: false }).attach();
 
 
-if (__DEV__) {
+if (process.env.NODE_ENV === 'development') {
   if (module.hot) {
     module.hot.dispose(::styles.detach);
   }

@@ -1,5 +1,3 @@
 export default {
-  /* Use this stylesheet for default properties.
-
-     See jss-isolate for more information */
+  // Write here style properties for jss-isolate
 };

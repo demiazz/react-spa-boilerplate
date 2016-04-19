@@ -1,4 +1,3 @@
 export default {
-  textColor: 'red',
-  textSize: 20,
+  // Write here theme variables for your styles and components
 };
