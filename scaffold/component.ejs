@@ -17,7 +17,7 @@ export const styleSheet = jss.createStyleSheet({
 }).attach();
 
 
-if (__DEV__) {
+if (process.env.NODE_ENV === 'development') {
   if (module.hot) {
     module.hot.dispose(::styleSheet.detach);
   }
