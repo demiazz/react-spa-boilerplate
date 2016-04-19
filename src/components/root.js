@@ -1,39 +1,26 @@
 import React from 'react';
 
-import { jss, theme } from '../styles';
+import { jss } from '../styles';
 
-
-const styles = jss.createStyleSheet({
-  container: {
-    position: 'fixed',
-    display: 'flex',
-    width: '100%',
-    height: '100%',
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-  content: {
-    color: theme.textColor,
-    fontSize: theme.textSize,
-  },
-}).attach();
-
-if (__DEV__) {
-  if (module.hot) {
-    module.hot.dispose(::styles.detach);
-  }
-}
 
 export default class Root extends React.Component {
   render() {
-    const { classes } = styles;
+    const { root } = styleSheet.classes; // eslint-disable-line
 
-    return (
-      <div className={classes.container}>
-        <span className={classes.content}>
-          Hello, browser!
-        </span>
-      </div>
-    );
+    return <div className={ root }>Hello, browser!</div>;
+  }
+}
+
+
+export const styleSheet = jss.createStyleSheet({
+  root: {
+    color: 'red',
+  },
+}).attach();
+
+
+if (process.env.NODE_ENV === 'development') {
+  if (module.hot) {
+    module.hot.dispose(::styleSheet.detach);
   }
 }
