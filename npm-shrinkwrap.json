@@ -2371,9 +2371,9 @@
       "resolved": "https://registry.npmjs.org/he/-/he-1.0.0.tgz"
     },
     "history": {
-      "version": "2.0.2",
+      "version": "2.1.0",
       "from": "history@>=2.0.1 <3.0.0",
-      "resolved": "https://registry.npmjs.org/history/-/history-2.0.2.tgz"
+      "resolved": "https://registry.npmjs.org/history/-/history-2.1.0.tgz"
     },
     "hoek": {
       "version": "2.16.3",
@@ -2406,9 +2406,9 @@
       "resolved": "https://registry.npmjs.org/html-minifier/-/html-minifier-1.5.0.tgz"
     },
     "html-webpack-plugin": {
-      "version": "2.15.0",
-      "from": "html-webpack-plugin@2.15.0",
-      "resolved": "https://registry.npmjs.org/html-webpack-plugin/-/html-webpack-plugin-2.15.0.tgz"
+      "version": "2.16.0",
+      "from": "html-webpack-plugin@2.16.0",
+      "resolved": "https://registry.npmjs.org/html-webpack-plugin/-/html-webpack-plugin-2.16.0.tgz"
     },
     "htmlparser2": {
       "version": "3.8.3",
@@ -3746,9 +3746,9 @@
       "resolved": "https://registry.npmjs.org/react-redux/-/react-redux-4.4.5.tgz"
     },
     "react-router": {
-      "version": "2.2.4",
-      "from": "react-router@2.2.4",
-      "resolved": "https://registry.npmjs.org/react-router/-/react-router-2.2.4.tgz"
+      "version": "2.3.0",
+      "from": "react-router@2.3.0",
+      "resolved": "https://registry.npmjs.org/react-router/-/react-router-2.3.0.tgz"
     },
     "react-router-redux": {
       "version": "4.0.2",
