@@ -3,11 +3,6 @@
   "env": {
     "browser": true,
     "node":    true,
-    "mocha":   true,
-  },
-  "globals": {
-    "expect":  true,
-    "__DEV__": true
   },
   "rules": {
     "jsx-quotes": [2, "prefer-single"]
