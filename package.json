@@ -28,9 +28,9 @@
   "scripts": {
     "start":         "NODE_ENV=development bin/server",
     "build":         "NODE_ENV=production bin/build",
-    "test":          "NODE_ENV=test $(npm bin)/mocha --compilers js:babel-register --recursive",
-    "test:watch":    "NODE_ENV=test $(npm bin)/mocha --watch --compilers js:babel-register --recursive",
-    "test:coverage": "NODE_ENV=test $(npm bin)/istanbul cover --report html $(npm root)/mocha/bin/_mocha -- --compilers js:babel-register --recursive",
+    "test":          "NODE_ENV=test $(npm bin)/mocha",
+    "test:watch":    "NODE_ENV=test $(npm bin)/mocha --watch",
+    "test:coverage": "NODE_ENV=test $(npm bin)/istanbul cover --report html $(npm root)/mocha/bin/_mocha",
     "lint":          "$(npm bin)/eslint ."
   },
   "dependencies": {
@@ -44,7 +44,7 @@
     "react":               "15.0.1",
     "react-dom":           "15.0.1",
     "react-router":        "2.3.0",
-    "redux":               "3.4.0",
+    "redux":               "3.5.0",
     "react-redux":         "4.4.5",
     "react-router-redux":  "4.0.2"
   },
@@ -88,7 +88,7 @@
     "eslint-plugin-babel":             "3.2.0",
     "eslint-plugin-react":             "4.3.0",
     "eslint-plugin-jsx-a11y":          "0.6.2",
-    "babel-eslint":                    "6.0.2",
+    "babel-eslint":                    "6.0.3",
 
     "mocha":                           "2.4.5",
     "chai":                            "3.5.0",
