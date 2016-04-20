@@ -30,7 +30,7 @@
     "build":         "NODE_ENV=production bin/build",
     "test":          "NODE_ENV=test $(npm bin)/ava | $(npm bin)/tap-spec",
     "test:watch":    "NODE_ENV=test $(npm bin)/ava --watch | $(npm bin)/tap-spec",
-    "test:coverage": "NODE_ENV=test $(npm bin)/nyc report --reporter html",
+    "test:coverage": "NODE_ENV=test $(npm bin)/nyc --reporter html npm test",
     "lint":          "$(npm bin)/eslint ."
   },
   "dependencies": {
@@ -61,6 +61,7 @@
     "babel-preset-react":              "6.5.0",
     "babel-preset-react-hmre":         "1.1.1",
     "babel-plugin-transform-runtime":  "6.7.5",
+    "babel-plugin-remove-module-hot":  "1.0.0",
 
     "react-addons-test-utils":         "15.0.1",
     "react-transform-hmr":             "1.0.4",
