@@ -30,7 +30,6 @@
     "build":         "NODE_ENV=production bin/build",
     "test":          "NODE_ENV=test $(npm bin)/ava | $(npm bin)/tap-spec",
     "test:watch":    "NODE_ENV=test $(npm bin)/ava --watch | $(npm bin)/tap-spec",
-    "test:coverage:old": "NODE_ENV=test $(npm bin)/istanbul cover --report html $(npm root)/mocha/bin/_mocha",
     "test:coverage": "NODE_ENV=test $(npm bin)/nyc report --reporter html",
     "lint":          "$(npm bin)/eslint ."
   },
