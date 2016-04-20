@@ -1,3 +1,4 @@
+import test from 'ava';
 import React from 'react';
 import { shallow } from 'enzyme';
 
@@ -5,18 +6,16 @@ import Root from '../../src/components/root';
 import { styleSheet } from '../../src/components/root';
 
 
-describe('components/root', () => {
-  it('has wrapper with class `.root`', () => {
-    const root = styleSheet.classes.root;
-    const wrapper = shallow(<Root />);
+test('has wrapper with class `.root`', t => {
+  const root = styleSheet.classes.root;
+  const wrapper = shallow(<Root />);
 
-    expect(wrapper).to.have.descendants(`.${root}`);
-  });
+  t.is(wrapper.find(`.${root}`).length, 1);
+});
 
-  it('has `Hello, browser!` text', () => {
-    const root = styleSheet.classes.root;
-    const wrapper = shallow(<Root />);
+test('has `Hello, browser!` text', t => {
+  const root = styleSheet.classes.root;
+  const wrapper = shallow(<Root />);
 
-    expect(wrapper.find(`.${root}`)).to.have.text('Hello, browser!');
-  });
+  t.is(wrapper.find(`.${root}`).text(), 'Hello, browser!');
 });

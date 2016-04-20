@@ -1,25 +1,8 @@
-import chai from 'chai';
-import { expect } from 'chai';
-import sinon from 'sinon';
-import sinonChai from 'sinon-chai';
-import chaiEnzyme from 'chai-enzyme';
-import chaiAsPromised from 'chai-as-promised';
-import jsdom from 'mocha-jsdom';
+import { jsdom } from 'jsdom';
 
-// Use chai extensions
-
-chai.use(sinonChai);
-chai.use(chaiEnzyme());
-chai.use(chaiAsPromised);
-
-// Make chai and sinon globally visible
-
-global.expect = expect;
-global.sinon = sinon;
-
-// Enable DOM emulation
-
-jsdom();
+global.document = jsdom('<body></body>');
+global.window = document.defaultView;
+global.navigator = window.navigator;
 
 // Mockup non JS resources
 
