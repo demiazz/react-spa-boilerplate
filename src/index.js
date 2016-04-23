@@ -6,7 +6,7 @@ import { Router, Route, browserHistory } from 'react-router';
 import { syncHistoryWithStore, routerReducer } from 'react-router-redux';
 
 import reducers from './reducers';
-import Root from './components/Root';
+import Root from './components/root';
 
 
 // Use development tools for redux is available
