@@ -5184,6 +5184,16 @@
       "from": "redux@3.5.1",
       "resolved": "https://registry.npmjs.org/redux/-/redux-3.5.1.tgz"
     },
+    "redux-logger": {
+      "version": "2.6.1",
+      "from": "redux-logger@2.6.1",
+      "resolved": "https://registry.npmjs.org/redux-logger/-/redux-logger-2.6.1.tgz"
+    },
+    "redux-thunk": {
+      "version": "2.0.1",
+      "from": "redux-thunk@2.0.1",
+      "resolved": "https://registry.npmjs.org/redux-thunk/-/redux-thunk-2.0.1.tgz"
+    },
     "regenerate": {
       "version": "1.2.1",
       "from": "regenerate@>=1.2.1 <2.0.0",
