@@ -34,22 +34,22 @@
     "lint":          "$(npm bin)/eslint ."
   },
   "dependencies": {
-    "jss":                 "3.6.3",
+    "jss":                 "3.7.0",
     "jss-vendor-prefixer": "2.0.0",
     "jss-nested":          "1.0.3",
-    "jss-camel-case":      "1.0.2",
+    "jss-camel-case":      "1.1.0",
     "jss-isolate":         "0.1.0",
-    "jss-default-unit":    "2.1.1",
+    "jss-default-unit":    "2.1.2",
 
     "react":               "15.0.1",
     "react-dom":           "15.0.1",
     "react-router":        "2.3.0",
-    "redux":               "3.5.0",
+    "redux":               "3.5.1",
     "react-redux":         "4.4.5",
     "react-router-redux":  "4.0.2"
   },
   "devDependencies": {
-    "babel-core":                      "6.7.6",
+    "babel-core":                      "6.7.7",
     "babel-register":                  "6.7.2",
 
     "babel-preset-es2015-node5":       "1.2.0",
@@ -85,10 +85,11 @@
     "autoprefixer":                    "6.3.6",
 
     "eslint":                          "2.8.0",
-    "eslint-config-airbnb":            "7.0.0",
+    "eslint-config-airbnb":            "8.0.0",
     "eslint-plugin-babel":             "3.2.0",
-    "eslint-plugin-react":             "4.3.0",
-    "eslint-plugin-jsx-a11y":          "0.6.2",
+    "eslint-plugin-react":             "5.0.1",
+    "eslint-plugin-jsx-a11y":          "1.0.2",
+    "eslint-plugin-import":            "1.5.0",
     "babel-eslint":                    "6.0.3",
 
     "ava":                             "0.14.0",

@@ -259,10 +259,25 @@
       "resolved": "https://registry.npmjs.org/babel-code-frame/-/babel-code-frame-6.7.5.tgz"
     },
     "babel-core": {
-      "version": "6.7.6",
-      "from": "babel-core@6.7.6",
-      "resolved": "https://registry.npmjs.org/babel-core/-/babel-core-6.7.6.tgz",
+      "version": "6.7.7",
+      "from": "babel-core@6.7.7",
+      "resolved": "https://registry.npmjs.org/babel-core/-/babel-core-6.7.7.tgz",
       "dependencies": {
+        "babel-code-frame": {
+          "version": "6.7.7",
+          "from": "babel-code-frame@>=6.7.7 <7.0.0",
+          "resolved": "https://registry.npmjs.org/babel-code-frame/-/babel-code-frame-6.7.7.tgz"
+        },
+        "babel-generator": {
+          "version": "6.7.7",
+          "from": "babel-generator@>=6.7.7 <7.0.0",
+          "resolved": "https://registry.npmjs.org/babel-generator/-/babel-generator-6.7.7.tgz"
+        },
+        "babel-types": {
+          "version": "6.7.7",
+          "from": "babel-types@>=6.7.7 <7.0.0",
+          "resolved": "https://registry.npmjs.org/babel-types/-/babel-types-6.7.7.tgz"
+        },
         "lodash": {
           "version": "3.10.1",
           "from": "lodash@>=3.10.0 <4.0.0",
@@ -429,6 +444,10 @@
       "version": "2.0.2",
       "from": "babel-plugin-react-transform@>=2.0.2 <3.0.0",
       "resolved": "https://registry.npmjs.org/babel-plugin-react-transform/-/babel-plugin-react-transform-2.0.2.tgz"
+    },
+    "babel-plugin-remove-module-hot": {
+      "version": "1.0.0",
+      "from": "babel-plugin-remove-module-hot@1.0.0"
     },
     "babel-plugin-syntax-async-functions": {
       "version": "6.5.0",
@@ -1630,24 +1649,51 @@
       }
     },
     "eslint-config-airbnb": {
-      "version": "7.0.0",
-      "from": "eslint-config-airbnb@7.0.0",
-      "resolved": "https://registry.npmjs.org/eslint-config-airbnb/-/eslint-config-airbnb-7.0.0.tgz"
+      "version": "8.0.0",
+      "from": "eslint-config-airbnb@8.0.0",
+      "resolved": "https://registry.npmjs.org/eslint-config-airbnb/-/eslint-config-airbnb-8.0.0.tgz"
+    },
+    "eslint-config-airbnb-base": {
+      "version": "1.0.3",
+      "from": "eslint-config-airbnb-base@>=1.0.2 <2.0.0",
+      "resolved": "https://registry.npmjs.org/eslint-config-airbnb-base/-/eslint-config-airbnb-base-1.0.3.tgz"
+    },
+    "eslint-import-resolver-node": {
+      "version": "0.2.0",
+      "from": "eslint-import-resolver-node@>=0.2.0 <0.3.0",
+      "resolved": "https://registry.npmjs.org/eslint-import-resolver-node/-/eslint-import-resolver-node-0.2.0.tgz"
     },
     "eslint-plugin-babel": {
       "version": "3.2.0",
       "from": "eslint-plugin-babel@3.2.0",
       "resolved": "https://registry.npmjs.org/eslint-plugin-babel/-/eslint-plugin-babel-3.2.0.tgz"
     },
+    "eslint-plugin-import": {
+      "version": "1.5.0",
+      "from": "eslint-plugin-import@1.5.0",
+      "resolved": "https://registry.npmjs.org/eslint-plugin-import/-/eslint-plugin-import-1.5.0.tgz",
+      "dependencies": {
+        "doctrine": {
+          "version": "1.2.0",
+          "from": "doctrine@1.2.0",
+          "resolved": "https://registry.npmjs.org/doctrine/-/doctrine-1.2.0.tgz"
+        },
+        "esutils": {
+          "version": "1.1.6",
+          "from": "esutils@>=1.1.6 <2.0.0",
+          "resolved": "https://registry.npmjs.org/esutils/-/esutils-1.1.6.tgz"
+        }
+      }
+    },
     "eslint-plugin-jsx-a11y": {
-      "version": "0.6.2",
-      "from": "eslint-plugin-jsx-a11y@0.6.2",
-      "resolved": "https://registry.npmjs.org/eslint-plugin-jsx-a11y/-/eslint-plugin-jsx-a11y-0.6.2.tgz"
+      "version": "1.0.2",
+      "from": "eslint-plugin-jsx-a11y@1.0.2",
+      "resolved": "https://registry.npmjs.org/eslint-plugin-jsx-a11y/-/eslint-plugin-jsx-a11y-1.0.2.tgz"
     },
     "eslint-plugin-react": {
-      "version": "4.3.0",
-      "from": "eslint-plugin-react@4.3.0",
-      "resolved": "https://registry.npmjs.org/eslint-plugin-react/-/eslint-plugin-react-4.3.0.tgz"
+      "version": "5.0.1",
+      "from": "eslint-plugin-react@5.0.1",
+      "resolved": "https://registry.npmjs.org/eslint-plugin-react/-/eslint-plugin-react-5.0.1.tgz"
     },
     "esmangle-evaluator": {
       "version": "1.0.0",
@@ -3140,19 +3186,19 @@
       "resolved": "https://registry.npmjs.org/jsprim/-/jsprim-1.2.2.tgz"
     },
     "jss": {
-      "version": "3.6.3",
-      "from": "jss@3.6.3",
-      "resolved": "https://registry.npmjs.org/jss/-/jss-3.6.3.tgz"
+      "version": "3.7.0",
+      "from": "jss@3.7.0",
+      "resolved": "https://registry.npmjs.org/jss/-/jss-3.7.0.tgz"
     },
     "jss-camel-case": {
-      "version": "1.0.2",
-      "from": "jss-camel-case@1.0.2",
-      "resolved": "https://registry.npmjs.org/jss-camel-case/-/jss-camel-case-1.0.2.tgz"
+      "version": "1.1.0",
+      "from": "jss-camel-case@1.1.0",
+      "resolved": "https://registry.npmjs.org/jss-camel-case/-/jss-camel-case-1.1.0.tgz"
     },
     "jss-default-unit": {
-      "version": "2.1.1",
-      "from": "jss-default-unit@2.1.1",
-      "resolved": "https://registry.npmjs.org/jss-default-unit/-/jss-default-unit-2.1.1.tgz"
+      "version": "2.1.2",
+      "from": "jss-default-unit@2.1.2",
+      "resolved": "https://registry.npmjs.org/jss-default-unit/-/jss-default-unit-2.1.2.tgz"
     },
     "jss-isolate": {
       "version": "0.1.0",
@@ -5134,9 +5180,9 @@
       }
     },
     "redux": {
-      "version": "3.5.0",
-      "from": "redux@3.5.0",
-      "resolved": "https://registry.npmjs.org/redux/-/redux-3.5.0.tgz"
+      "version": "3.5.1",
+      "from": "redux@3.5.1",
+      "resolved": "https://registry.npmjs.org/redux/-/redux-3.5.1.tgz"
     },
     "regenerate": {
       "version": "1.2.1",
@@ -5246,6 +5292,11 @@
           "resolved": "https://registry.npmjs.org/resolve-from/-/resolve-from-1.0.1.tgz"
         }
       }
+    },
+    "resolve": {
+      "version": "1.1.7",
+      "from": "resolve@>=1.1.6 <2.0.0",
+      "resolved": "https://registry.npmjs.org/resolve/-/resolve-1.1.7.tgz"
     },
     "resolve-cwd": {
       "version": "1.0.0",
