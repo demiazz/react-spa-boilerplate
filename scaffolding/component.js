@@ -50,6 +50,7 @@ function generateComponentTest(component, options) {
   const templateData = {
     name: getDisplayName(component),
     path: options.container ? `${component}/component` : component,
+    relativePath: _.repeat('../', component.split('/').length - 1),
     module: component,
     styles: options.styles,
   };
@@ -84,6 +85,7 @@ function generateStylesTest(component) {
   const templateData = {
     name: getDisplayName(component),
     module: component,
+    relativePath: _.repeat('../', component.split('/').length - 1),
   };
   const outputPath = path.join(testPath, component, 'styles.js');
 
@@ -104,6 +106,7 @@ function generateContainerTest(component) {
   const templateName = 'component/container-test';
   const templateData = {
     module: component,
+    relativePath: _.repeat('../', component.split('/').length - 1),
   };
   const outputPath = path.join(testPath, component, 'index.js');
 
