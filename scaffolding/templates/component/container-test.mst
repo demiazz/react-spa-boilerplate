@@ -1,0 +1,12 @@
+import test from 'ava';
+import React from 'react';
+import { shallow } from 'enzyme';
+
+import { mapStateToProps } from '../../src/components/{{{module}}}';
+import { mapDispathToProps } from '../../src/components/{{{module}}}';
+import { mergeProps } from '../../src/components/{{{module}}}';
+
+
+test('{{{module}}} container', t => {
+  t.fail('pending test');
+});

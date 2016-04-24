@@ -1,0 +1,28 @@
+import { connect } from 'react-redux';
+
+import {{{name}}} from './component';
+
+
+function mapStateToProps(state, ownProps) {
+  return /* write state map here */;
+}
+
+function mapDispatchToProps(dispatch, ownProps) {
+  return /* write dispatch map here */;
+}
+
+function mergeProps(stateProps, dispatchProps, ownProps) {
+  return /* write merge here */;
+}
+
+
+export default connect(
+  mapStateToProps, mapDispatchToProps, mergeProps
+)({{{name}}});
+
+
+if (process.env.NODE_ENV === 'test') {
+  module.exports.mapStateToProps = mapStateToProps;
+  module.exports.mapDispatchToProps = mapDispatchToProps;
+  module.exports.mergeProps = mergeProps;
+}

@@ -1,0 +1,18 @@
+import React from 'react';
+import { Component, PropTypes } from 'react';
+
+{{#styles}}
+import classes from './styles';
+
+{{/styles}}
+
+export default class {{{name}}} extends Component {
+  render() {
+    return null;
+  }
+}
+
+
+{{{name}}}.propTypes = {
+  // write  validation here
+};

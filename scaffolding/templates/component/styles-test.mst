@@ -1,0 +1,10 @@
+import test from 'ava';
+import React from 'react';
+import { shallow } from 'enzyme';
+
+import classes from '../../src/components/{{{module}}}/styles';
+
+
+test('{{{module}}} styles', t => {
+  t.fail('pending test');
+});

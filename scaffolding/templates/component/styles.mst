@@ -1,0 +1,13 @@
+import { jss } from '{{{relativePath}}}../../styles';
+
+
+const styleSheet = jss.createStyleSheet({
+  // write styles here
+}).attach();
+
+if (module.hot) {
+  module.hot.dispose(::styleSheet.detach);
+}
+
+
+export default styleSheet.classes;
