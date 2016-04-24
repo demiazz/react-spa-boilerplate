@@ -1,0 +1,22 @@
+#!/usr/bin/env node
+
+const commander = require('commander');
+
+const scaffold = require('../scaffold');
+
+
+commander.version(require('../package').version);
+
+commander.usage('[generator] [options] <name>');
+
+commander
+  .command('component <name>')
+  .description('generate component')
+  .alias('c')
+  .option('-p, --pure', 'generate pure component')
+  .option('-c, --container', 'generate container component')
+  .option('-S, --no-styles', 'generate component without styles')
+  .option('-T, --no-tests', 'generate component without tests')
+  .action(scaffold.component);
+
+commander.parse(process.argv);
