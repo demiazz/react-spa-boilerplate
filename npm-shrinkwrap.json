@@ -3565,6 +3565,11 @@
         }
       }
     },
+    "mustache": {
+      "version": "2.2.1",
+      "from": "mustache@latest",
+      "resolved": "https://registry.npmjs.org/mustache/-/mustache-2.2.1.tgz"
+    },
     "mute-stream": {
       "version": "0.0.5",
       "from": "mute-stream@0.0.5",
