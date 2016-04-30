@@ -1536,11 +1536,6 @@
       "from": "ee-first@1.1.1",
       "resolved": "https://registry.npmjs.org/ee-first/-/ee-first-1.1.1.tgz"
     },
-    "ejs": {
-      "version": "2.4.1",
-      "from": "ejs@2.4.1",
-      "resolved": "https://registry.npmjs.org/ejs/-/ejs-2.4.1.tgz"
-    },
     "emojis-list": {
       "version": "1.0.1",
       "from": "emojis-list@>=1.0.0 <2.0.0",
@@ -3421,18 +3416,6 @@
       "from": "lodash.tostring@>=4.0.0 <5.0.0",
       "resolved": "https://registry.npmjs.org/lodash.tostring/-/lodash.tostring-4.1.2.tgz"
     },
-    "lodash.values": {
-      "version": "4.1.0",
-      "from": "lodash.values@4.1.0",
-      "resolved": "https://registry.npmjs.org/lodash.values/-/lodash.values-4.1.0.tgz",
-      "dependencies": {
-        "lodash.keys": {
-          "version": "4.0.6",
-          "from": "lodash.keys@>=4.0.0 <5.0.0",
-          "resolved": "https://registry.npmjs.org/lodash.keys/-/lodash.keys-4.0.6.tgz"
-        }
-      }
-    },
     "lodash.words": {
       "version": "3.2.0",
       "from": "lodash.words@>=3.0.0 <4.0.0",
@@ -3569,11 +3552,6 @@
       "version": "0.0.8",
       "from": "minimist@0.0.8",
       "resolved": "https://registry.npmjs.org/minimist/-/minimist-0.0.8.tgz"
-    },
-    "mkdir-recursive": {
-      "version": "0.2.1",
-      "from": "mkdir-recursive@0.2.1",
-      "resolved": "https://registry.npmjs.org/mkdir-recursive/-/mkdir-recursive-0.2.1.tgz"
     },
     "mkdirp": {
       "version": "0.5.1",
@@ -6004,18 +5982,6 @@
       "version": "1.1.2",
       "from": "upper-case-first@>=1.1.0 <2.0.0",
       "resolved": "https://registry.npmjs.org/upper-case-first/-/upper-case-first-1.1.2.tgz"
-    },
-    "uppercamelcase": {
-      "version": "1.1.0",
-      "from": "uppercamelcase@1.1.0",
-      "resolved": "https://registry.npmjs.org/uppercamelcase/-/uppercamelcase-1.1.0.tgz",
-      "dependencies": {
-        "camelcase": {
-          "version": "1.2.1",
-          "from": "camelcase@>=1.2.1 <2.0.0",
-          "resolved": "https://registry.npmjs.org/camelcase/-/camelcase-1.2.1.tgz"
-        }
-      }
     },
     "url": {
       "version": "0.10.3",
