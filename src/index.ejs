@@ -1,0 +1,21 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>react-spa-boilerplate</title>
+    <meta name="description" content="A boilerplate for React SPA without server rendering">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <% for (var i = 0; i < htmlWebpackPlugin.files.css.length; i++) { %>
+      <link href="<%= htmlWebpackPlugin.files.css[i] %>" rel="stylesheet">
+    <% } %>
+
+    <% for (var i = 0; i < htmlWebpackPlugin.files.js.length; i++) { %>
+      <script src="<%= htmlWebpackPlugin.files.js[i] %>" defer></script>
+    <% } %>
+  </head>
+  <body>
+    <div id="mount-point"></div>
+  </body>
+</html>
