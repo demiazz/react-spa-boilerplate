@@ -71,12 +71,8 @@
     "react-addons-test-utils":                        "15.0.2",
     "react-transform-hmr":                            "1.0.4",
 
-    "express":                                        "4.13.4",
-
     "webpack":                                        "1.13.0",
     "webpack-dev-server":                             "1.14.1",
-    "webpack-dev-middleware":                         "1.6.1",
-    "webpack-hot-middleware":                         "2.10.0",
 
     "babel-loader":                                   "6.2.4",
     "style-loader":                                   "0.13.1",
@@ -107,7 +103,6 @@
 
     "nyc":                                            "6.4.0",
 
-    "rimraf":                                         "2.5.2",
     "lodash.values":                                  "4.1.0",
     "ejs":                                            "2.4.1",
     "commander":                                      "2.9.0",
