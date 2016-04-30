@@ -38,6 +38,11 @@ const config = {
   module: {
     loaders: [
       {
+        test: /\.js$/,
+        exclude: /node_modules/,
+        loader: 'babel',
+      },
+      {
         test: /\.json$/,
         loader: 'json',
       },
@@ -56,28 +61,6 @@ config.devtool = isProduction ? 'source-map' : 'eval';
 if (!isProduction) {
   config.output.pathinfo = true;
 }
-
-// JavaScript loader
-
-const jsLoader = {
-  test: /\.js$/,
-  exclude: /node_modules/,
-  loader: 'babel',
-  query: {
-    babelrc: false,
-    presets: ['react', 'es2015', 'stage-0'],
-    plugins: ['transform-runtime'],
-  },
-};
-
-if (isProduction) {
-  jsLoader.query.plugins.push('transform-react-constant-elements');
-  jsLoader.query.plugins.push('transform-react-inline-elements');
-} else {
-  jsLoader.query.presets.push('react-hmre');
-}
-
-config.module.loaders.push(jsLoader);
 
 // CSS loader
 
