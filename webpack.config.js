@@ -26,15 +26,6 @@ const config = {
     publicPath: '/',
   },
 
-  plugins: [
-    new webpack.EnvironmentPlugin(['NODE_ENV']),
-    new HtmlPlugin({
-      template: path.join(src, 'index.ejs'),
-      inject: false,
-      filename: 'index.html',
-    }),
-  ],
-
   module: {
     loaders: [
       {
@@ -48,6 +39,18 @@ const config = {
       },
     ],
   },
+
+  plugins: [
+    new webpack.EnvironmentPlugin(['NODE_ENV']),
+    new HtmlPlugin({
+      template: path.join(src, 'index.ejs'),
+      inject: false,
+      filename: 'index.html',
+    }),
+    new webpack.ProvidePlugin({
+      fetch: 'imports?this=>global!exports?global.fetch!whatwg-fetch',
+    }),
+  ],
 };
 
 // Output configuration
