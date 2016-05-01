@@ -1,5 +1,5 @@
 {
-  "presets": ["react", "stage-0"],
+  "presets": ["react"],
   "plugins": ["transform-runtime"],
   "env": {
     "production": {

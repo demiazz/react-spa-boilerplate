@@ -12,19 +12,18 @@ import Root from './components/root';
 // Use development tools for redux is available
 
 const storeConstructor = compose(
-  window.devToolsExtension ? window.devToolsExtension() : f => f,
+  window.devToolsExtension ? window.devToolsExtension() : f => f
 )(createStore);
 
 // Construct store
 
-const store = storeConstructor(combineReducers({
-  ...reducers, routing: routerReducer,
-}));
+const store = storeConstructor(combineReducers(Object.assign({}, reducers, {
+  routing: routerReducer,
+})));
 
 // Sync browser history with store
 
 const history = syncHistoryWithStore(browserHistory, store);
-
 
 ReactDOM.render(
   <Provider store={store}>
