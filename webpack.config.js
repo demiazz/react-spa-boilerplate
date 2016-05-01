@@ -2,6 +2,7 @@ const path = require('path');
 const webpack = require('webpack');
 const HtmlPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const CompressionPlugin = require('compression-webpack-plugin');
 const StatsPlugin = require('stats-webpack-plugin');
 const autoprefixer = require('autoprefixer');
 const cssnano = require('cssnano');
@@ -108,6 +109,10 @@ if (isProduction) {
 
   config.plugins.push(
     new webpack.optimize.OccurenceOrderPlugin()
+  );
+
+  config.plugins.push(
+    new CompressionPlugin()
   );
 
   config.plugins.push(
