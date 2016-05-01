@@ -1,7 +1,15 @@
+# Node Modules
 node_modules
-npm-debug
+
+# Mac OS X
 .DS_Store
+
+# Build
 dist
+
+# Logs
 *.log
+
+# Coverage
 coverage
 .nyc_output
