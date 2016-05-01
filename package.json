@@ -23,7 +23,7 @@
   },
   "homepage": "https://github.com/demiazz/react-spa-boilerplate",
   "engines": {
-    "node": ">= 5.10.0"
+    "node": ">= 6.0.0"
   },
   "scripts": {
     "start":         "NODE_ENV=development $(npm bin)/webpack-dev-server --config webpack.config.js",
@@ -57,7 +57,7 @@
     "babel-core":                                     "6.7.7",
     "babel-register":                                 "6.7.2",
 
-    "babel-preset-es2015-node5":                      "1.2.0",
+    "babel-preset-node6":                             "11.0.0",
     "babel-preset-stage-3":                           "6.5.0",
     "babel-plugin-add-module-exports":                "0.1.4",
 
