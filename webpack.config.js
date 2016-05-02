@@ -5,7 +5,6 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const CompressionPlugin = require('compression-webpack-plugin');
 const StatsPlugin = require('stats-webpack-plugin');
 const autoprefixer = require('autoprefixer');
-const cssnano = require('cssnano');
 
 
 // Environment
@@ -76,11 +75,28 @@ if (!isProduction) {
 // CSS loader
 
 const cssLoader = {
+  // NOTE: process external `.css` files.
   test: /\.css$/,
 };
-const cssLoaders = ['css-loader', 'postcss-loader'];
+const cssLoaders = [
+  `css-loader?${JSON.stringify({
+    // NOTE: don't need source maps on production. Error don't handles in
+    //       styles.
+    sourceMap: !isProduction,
+    // NOTE: use shorter style name in production, and more informative in
+    //       development for debug purposes.
+    localIdentName: isProduction
+      ? '[hash:base64:4]'
+      : '[name]__[local]___[hash:base64:3]',
+    // NOTE: minimize result code for production (`css-loader` uses `cssnano`).
+    minimize: isProduction,
+  })}`,
+  // NOTE: use `defaults` pack of plugins for processing external styles.
+  'postcss-loader',
+];
 
 if (isProduction) {
+  // NOTE: extract styles to external file for production build.
   cssLoader.loader = ExtractTextPlugin.extract('style-loader', cssLoaders);
 } else {
   cssLoader.loaders = ['style-loader'].concat(cssLoaders);
@@ -88,15 +104,51 @@ if (isProduction) {
 
 config.module.loaders.push(cssLoader);
 
-// PostCSS
+// PostCSS loader
 
-const postcssPlugins = [autoprefixer];
+const pcssLoader = {
+  // NOTE: use `.pcss` extension for PostCSS code.
+  test: /\.pcss$/,
+};
+const pcssLoaders = [
+  `css-loader?${JSON.stringify({
+    // NOTE: don't need source maps on production. Error don't handles in
+    //       styles.
+    sourceMap: !isProduction,
+    // NOTE: use CSS Modules.
+    modules: true,
+    // NOTE: use shorter style name in production, and more informative in
+    //       development for debug purposes.
+    // NOTE: `camelCase` option used for export camel cased names to JS.
+    localIdentName: isProduction
+      ? '[hash:base64:4]:camelCase'
+      : '[name]__[local]___[hash:base64:3]:camelCase',
+    // NOTE: minimize result code for production (`css-loader` uses `cssnano`).
+    minimize: isProduction,
+  })}`,
+  // NOTE: use `modules` pack for processing internal CSS modules files.
+  'postcss-loader?pack=modules',
+];
 
 if (isProduction) {
-  postcssPlugins.push(cssnano);
+  // NOTE: extract styles to external file for production build.
+  pcssLoader.loader = ExtractTextPlugin.extract('style-loader', pcssLoaders);
+} else {
+  pcssLoader.loaders = ['style-loader'].concat(pcssLoaders);
 }
 
-config.postcss = postcssPlugins;
+config.module.loaders.push(pcssLoader);
+
+// PostCSS
+
+config.postcss = function postcssPacks() {
+  return {
+    // NOTE: PostCSS plugins for processing external CSS dependencies.
+    defaults: [autoprefixer],
+    // NOTE: PostCSS plugins for processing internal CSS modules.
+    modules: [autoprefixer],
+  };
+};
 
 // Plugins
 
