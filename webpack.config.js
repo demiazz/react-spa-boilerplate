@@ -197,7 +197,9 @@ if (isProduction) {
   // NOTE: enable gzip compression. Modern web-servers and browsers can load
   //       gzipped files.
   config.plugins.push(
-    new CompressionPlugin()
+    new CompressionPlugin({
+      algorithm: 'zopfli',
+    })
   );
 
   // NOTE: generate manifest based on build statistics. May be used with
