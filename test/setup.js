@@ -15,5 +15,8 @@ global.__DEV__ = true; // eslint-disable-line
 // NOTE: mock function for unloadable modules.
 function noop() { }
 
+// NOTE: load `.jss` as JavaScript module
+require.extensions['.jss'] = require.extensions['.js'];
+
 // NOTE: don't load anything, if module require other `.css` module.
 require.extensions['.css'] = noop;

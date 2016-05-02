@@ -30,7 +30,7 @@ const config = {
   module: {
     loaders: [
       {
-        test: /\.js$/,
+        test: /\.jss?$/,
         exclude: /node_modules/,
         loader: 'babel',
       },
@@ -55,6 +55,10 @@ const config = {
       __DEV__: !isProduction,
     }),
   ],
+
+  resolve: {
+    extensions: ['', '.js', '.jss'],
+  },
 };
 
 // Output configuration
