@@ -623,6 +623,11 @@
       "from": "babel-plugin-transform-react-jsx-source@>=6.3.13 <7.0.0",
       "resolved": "https://registry.npmjs.org/babel-plugin-transform-react-jsx-source/-/babel-plugin-transform-react-jsx-source-6.5.0.tgz"
     },
+    "babel-plugin-transform-react-remove-prop-types": {
+      "version": "0.2.6",
+      "from": "babel-plugin-transform-react-remove-prop-types@0.2.6",
+      "resolved": "https://registry.npmjs.org/babel-plugin-transform-react-remove-prop-types/-/babel-plugin-transform-react-remove-prop-types-0.2.6.tgz"
+    },
     "babel-plugin-transform-regenerator": {
       "version": "6.6.5",
       "from": "babel-plugin-transform-regenerator@>=6.6.0 <7.0.0",

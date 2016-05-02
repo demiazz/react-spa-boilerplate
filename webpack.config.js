@@ -152,14 +152,14 @@ if (isProduction) {
     new ExtractTextPlugin('[name]-[hash].css')
   );
 
-  config.plugins.push(
-    new webpack.optimize.UglifyJsPlugin({
-      compressor: {
-        warnings: false,
-        screw_ie8: true,
-      },
-    })
-  );
+  // config.plugins.push(
+  //   new webpack.optimize.UglifyJsPlugin({
+  //     compressor: {
+  //       warnings: false,
+  //       screw_ie8: true,
+  //     },
+  //   })
+  // );
 
   config.plugins.push(
     new webpack.optimize.OccurenceOrderPlugin()
