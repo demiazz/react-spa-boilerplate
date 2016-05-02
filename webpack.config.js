@@ -81,13 +81,8 @@ const cssLoader = {
 const cssLoaders = [
   `css-loader?${JSON.stringify({
     // NOTE: don't need source maps on production. Error don't handles in
-    //       styles.
+    //       styles. Source maps will be generated, but will be empty.
     sourceMap: !isProduction,
-    // NOTE: use shorter style name in production, and more informative in
-    //       development for debug purposes.
-    localIdentName: isProduction
-      ? '[hash:base64:4]'
-      : '[name]__[local]___[hash:base64:3]',
     // NOTE: minimize result code for production (`css-loader` uses `cssnano`).
     minimize: isProduction,
   })}`,
@@ -107,22 +102,22 @@ config.module.loaders.push(cssLoader);
 // PostCSS loader
 
 const pcssLoader = {
-  // NOTE: use `.pcss` extension for PostCSS code.
   test: /\.pcss$/,
 };
 const pcssLoaders = [
   `css-loader?${JSON.stringify({
     // NOTE: don't need source maps on production. Error don't handles in
-    //       styles.
+    //       styles. Source maps will be generated, but will be empty.
     sourceMap: !isProduction,
     // NOTE: use CSS Modules.
     modules: true,
     // NOTE: use shorter style name in production, and more informative in
     //       development for debug purposes.
-    // NOTE: `camelCase` option used for export camel cased names to JS.
     localIdentName: isProduction
-      ? '[hash:base64:4]:camelCase'
-      : '[name]__[local]___[hash:base64:3]:camelCase',
+      ? '[hash:base64:4]'
+      : '[name]__[local]___[hash:base64:3]',
+    // NOTE: `camelCase` option used for export camel cased names to JS.
+    camelCase: true,
     // NOTE: minimize result code for production (`css-loader` uses `cssnano`).
     minimize: isProduction,
   })}`,
