@@ -1035,6 +1035,11 @@
         }
       }
     },
+    "classnames": {
+      "version": "2.2.5",
+      "from": "classnames@2.2.5",
+      "resolved": "https://registry.npmjs.org/classnames/-/classnames-2.2.5.tgz"
+    },
     "clean-css": {
       "version": "3.4.12",
       "from": "clean-css@>=3.4.0 <3.5.0",
