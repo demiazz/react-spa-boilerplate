@@ -90,7 +90,6 @@
     "compression-webpack-plugin":                     "0.3.1",
 
     "autoprefixer":                                   "6.3.6",
-    "cssnano":                                        "3.5.2",
 
     "eslint":                                         "2.9.0",
     "eslint-config-airbnb":                           "8.0.0",
