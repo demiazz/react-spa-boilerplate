@@ -20,3 +20,6 @@ require.extensions['.jss'] = require.extensions['.js'];
 
 // NOTE: don't load anything, if module require other `.css` module.
 require.extensions['.css'] = noop;
+
+// NOTE: don't load anything, if module require other `.pcss` module.
+require.extensions['.pcss'] = noop;
