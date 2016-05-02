@@ -26,7 +26,7 @@
     "node": ">= 6.0.0"
   },
   "scripts": {
-    "start":         "NODE_ENV=development $(npm bin)/webpack-dev-server --config webpack.config.js",
+    "start":         "NODE_ENV=development $(npm bin)/webpack-dev-server --config webpack.config.js --hot --inline",
     "build":         "NODE_ENV=production $(npm bin)/webpack --config webpack.config.js",
     "test":          "NODE_ENV=test $(npm bin)/ava | $(npm bin)/tap-spec",
     "test:watch":    "NODE_ENV=test $(npm bin)/ava --watch | $(npm bin)/tap-spec",

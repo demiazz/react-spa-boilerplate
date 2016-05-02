@@ -182,10 +182,6 @@ if (isProduction) {
   config.plugins.push(
     new webpack.NoErrorsPlugin()
   );
-
-  config.plugins.push(
-    new webpack.HotModuleReplacementPlugin()
-  );
 }
 
 // Development server
@@ -195,7 +191,6 @@ config.devServer = {
   compress: false,
   host: '0.0.0.0',
   port: 3000,
-  inline: true,
   historyApiFallback: true,
 };
 
