@@ -51,6 +51,9 @@ const config = {
     new webpack.ProvidePlugin({
       fetch: 'imports?this=>global!exports?global.fetch!whatwg-fetch',
     }),
+    new webpack.DefinePlugin({
+      __DEV__: !isProduction,
+    }),
   ],
 };
 

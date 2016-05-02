@@ -5,7 +5,10 @@
   ],
   "env": {
     "browser": true,
-    "node":    true,
+    "node":    true
+  },
+  "globals": {
+    "__DEV__": false
   },
   "rules": {
     "jsx-quotes": [2, "prefer-single"]
